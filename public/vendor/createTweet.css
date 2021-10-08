@@ -1,0 +1,37 @@
+#tweet-container{
+    padding: 10px;
+}
+.createTweet {
+    margin-top: 10px;
+    border: solid black 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.createTweet:hover{
+    box-shadow: 5px 5px #4056A1;
+}
+.createTweet header {
+    display: flex;
+    justify-content: space-between;
+}
+.photo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.createTweet footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid black 3px;
+    padding-top: 10px;
+}
+.iconcontainer {
+    color: #4056A1;
+}
+.iconcontainer .fas:hover {
+    color: #DAA520;
+}
+.name {
+    color: #4056A160;
+}

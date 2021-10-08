@@ -1,12 +1,13 @@
 header{
     background-color:#d4c200;
-    height: 400px;
+    height: 450px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: large;
     justify-items: center;
+    padding-top: 7.5em;
 }
 #profile-hex{
     justify-content: center;
