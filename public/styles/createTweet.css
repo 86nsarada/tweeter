@@ -26,11 +26,14 @@
     border-top: solid black 3px;
     padding-top: 10px;
 }
-.iconcontainer {
+.icons {
     color: #4056A1;
+    align-items: flex-end;
+    padding-left: 24em;
 }
-.iconcontainer .fas:hover {
+.icons .fas:hover {
     color: #DAA520;
+    align-items: flex-end;
 }
 .name {
     color: #4056A160;

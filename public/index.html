@@ -1,104 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link href="https://www.transparenttextures.com/patterns/black-thread-light.png" rel= "stylesheet" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/createTweet.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+
+  <!-- External CSS -->
+  <link href="https://www.transparenttextures.com/patterns/black-thread-light.png" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    rel="stylesheet">
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/createTweet.css" type="text/css" />
 
 
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- External JS -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"
+    integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-      
-      <div class= "Hello">
-        <span id="write">Write a new tweet</span>
-        <span><i class="fas fa-angle-double-down" id="icon"></i></span>
-      </div>  
-    </nav>
-    <header>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span>tweeter</span>
+
+    <div class="Hello">
+      <span id="write">Write a new tweet</span>
+      <span><i class="fas fa-angle-double-down" id="icon"></i></span>
+    </div>
+  </nav>
+  <header>
+    <div>
+      <img src="/images/profile-hex.png">
+      <br />
       <div>
-          <img src="/images/profile-hex.png"> 
-          <br/>
-          <div>
-            <span style="justify-items: center;">
-            <h2 style="text-align:center ;">SARADA</h2>
-          </span>
-          </div>   
-        </div>
-      
-     
+        <span style="justify-items: center;">
+          <h2 style="text-align:center ;">SARADA</h2>
+        </span>
+      </div>
+    </div>
+
+
   </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-    
-    <section class="new-tweet">
-      <!--<h2>Compose Tweet</h2>-->
-      <!--<form method="POST", action="/tweets/">-->
-        <form id="new-tweet-form">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text" ></textarea>
-        <hr>
-        <div class="new-tweet-button-container">
+  <!-- Page-specific (main) content here -->
+  <main class="container"></main>
 
-          <button type="submit">Tweet</button>
-          <span name="counter" id="counter_clicks" class="counter" for="tweet-text">140</span>
-        </div>
-        <section id="tweet-container" >
-          <article class="create-tweet">
-            <article>
-            <div class="photo">
-              <img src=${tweet.user.avatars}>
-              <span>${tweet.user.name}</span>
-            </div>
-            <div class="name">
-              <p>${tweet.user.handle}</p>
-          </div>
-          <label for ="user-tweet-text">user 1 tweet!</label>
-          
-          <textarea name="new-text" id="new-tweet-text"></textarea>
-        
-      <footer>
-        <span>${jquery.timeago(tweet.created_at}</span>
-        <div class="icons">
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
-          
-      
+  <section class="new-tweet">
+    <!--<h2>Compose Tweet</h2>-->
+    <!--<form method="POST", action="/tweets/">-->
+    <form id="new-tweet-form">
+      <label for="tweet-text">What are you humming about?</label>
+      <textarea name="text" id="tweet-text"></textarea>
+      <hr>
+      <div class="new-tweet-button-container">
+
+        <button type="submit">Tweet</button>
+        <span name="counter" id="counter_clicks" class="counter" for="tweet-text">140</span>
+        <span id="error">Too long,please give upto 140 characters!</span>
       </div>
-      
-      </footer>
-    </article>
-    </article>
-        </section>
-      </form>
-    </section>
+      <section id="tweet-container">
+        
+      </section>
+    </form>
+  </section>
 
-    
+
 </body>
+
 </html>
