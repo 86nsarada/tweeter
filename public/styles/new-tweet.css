@@ -19,20 +19,18 @@ label{
 
   }
   
-   .counter{
+  .counter{
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
     font-family: 'Bungee', cursive;
   } 
-  /* .red{
-    color: red;
-  }*/
+  
   button{
     border: none;
     background-color: #4056A1;
     color: #FFFFFF;
-    /* font-family: 'Bungee', cursive; */
+    
   }
   .new-tweet-button-container{
       display: flex;

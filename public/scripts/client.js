@@ -44,31 +44,30 @@ jQuery(document).ready(function () {
   function loadTweets() {
     console.log("inside load tweets");
     $.ajax({
-        url: '/tweets',
-        method: 'GET',
-        datatype: "json",
-        success: (tweets) => {
-            //console.log("data:", tweets);
-            tweets.reverse();
-            renderTweets(tweets);
-        }
+      url: '/tweets',
+      method: 'GET',
+      datatype: "json",
+      success: (tweets) => {
+
+        tweets.reverse();
+        renderTweets(tweets);
+      }
     })
-}
-loadTweets();
-$("#error").hide();
+  }
+  loadTweets();
+  $("#error").hide();
 
   const renderTweets = function (tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-    
-    //$('#tweet-container').empty();
+
+
     console.log("render tweets is running");
     for (let tweet of tweets) {
-      //alert("is this thing really really on?");
+
       jQuery('#tweet-container').append(createTweetElement(tweet));
-      // const $tweet = createTweetElement(tweet);      
-      //  $("#tweet-container").prepend($tweet); 
+
     }
   }
   const createTweetElement = function (tweet) {
@@ -97,67 +96,37 @@ $("#error").hide();
           </footer>
         </article>`;
     return $(markup);
-    //return $("<h1>Hello world<h1>");
-    //<span>${timeago.format(tweet.created_at)}</span>
+
 
   };
 
-  
+
   renderTweets(data);
   console.log("hello");
 
 
-/* <article class="create-tweet">
-          <div class="photo">
-            <img src="${tweet.user.avatars}">
-            <span>${tweet.user.name}</span>
-          </div>
-          <div class="name">
-            <p>${tweet.user.handle}</p>
-          </div>
-          <div class="message">
-            <p>${escape(tweet.content.text)}</p>
-          </div>
-          <label for="user-tweet-text">user 1 tweet!</label>
-
-        <textarea name="new-text" id="new-tweet-text"></textarea>
-
-          <footer>
-            <span>${jquery.timeago(tweet.created_at)}</span>
-            <div class="icons">
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-
-
-            </div>
-
-          </footer
-        </article> */
-        /* tweet form submission */
-    $("#new-tweet-form").submit(function (event) {
-      console.log('event');
-      event.preventDefault();
-      //event.stopImmediatePropagation()
-      let charCount = $("#tweet-text").val().length;
-      console.log(charCount)
-      if (charCount === 0) {
-        console.log("my hello world")
-          $(".displayerror").text("You need letters to tweet");
-          $("#error").slideDown();
-      } else if (charCount > 140){ 
-        //alert("more than 140 characters...please tweet upto 140 characters!");
-          $(".displayerror").text("Too long,please give upto 140 characters!");
-          $("#error").slideDown();
-      } else {
-          console.log($( this ).serialize());
-          const serializedData = $(this).serialize();
-          $.post("/tweets", serializedData, (response) => {
-              loadTweets();
-              $("#tweet-text").val("");
-          });
-      }
-      console.log("hello world here?")
+  $("#new-tweet-form").submit(function (event) {
+    console.log('event');
+    event.preventDefault();
+    //event.stopImmediatePropagation()
+    let charCount = $("#tweet-text").val().length;
+    console.log(charCount)
+    if (charCount === 0) {
+      console.log("my hello world")
+      $(".displayerror").text("You need enter letters to tweet");
+      $("#error").slideDown();
+    } else if (charCount > 140) {
+      $(".displayerror").text("Too long,please give upto 140 characters!");
+      $("#error").slideDown();
+    } else {
+      console.log($(this).serialize());
+      const serializedData = $(this).serialize();
+      $.post("/tweets", serializedData, (response) => {
+        loadTweets();
+        $("#tweet-text").val("");
+      });
+    }
+    console.log("hello world here?")
   })
 })
 
