@@ -29,7 +29,7 @@
 .icons {
     color: #4056A1;
     align-items: flex-end;
-    padding-left: 24em;
+    padding-left: 8em;
 }
 .icons .fas:hover {
     color: #DAA520;
@@ -38,3 +38,12 @@
 .name {
     color: #4056A160;
 }
+
+#error{
+    padding: 10px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;  
+    
+}
+

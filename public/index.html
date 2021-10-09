@@ -4,6 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link href="https://www.transparenttextures.com/patterns/black-thread-light.png" rel="stylesheet">
@@ -23,7 +24,8 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/createTweet.css" type="text/css" />
-
+  <link rel="stylesheet" href="/styles/media.css" type="text/css" />
+  
 
 
   <!-- External JS -->
@@ -73,10 +75,14 @@
       <textarea name="text" id="tweet-text"></textarea>
       <hr>
       <div class="new-tweet-button-container">
-
+        <div id="error">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span class="displayerror"></span>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
         <button type="submit">Tweet</button>
+     
         <span name="counter" id="counter_clicks" class="counter" for="tweet-text">140</span>
-        <span id="error">Too long,please give upto 140 characters!</span>
       </div>
       <section id="tweet-container">
         

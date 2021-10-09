@@ -19,6 +19,9 @@ body {
   background-color: #f4f1ec;
   font-size: 36px;
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content:space-between; 
+  
 }
 
 /*
@@ -31,7 +34,7 @@ font-family: 'Bungee', curive;
  .container{
   color: #545149;
 align-content: center;
-width: 90%;
+/* width: 90%; */
 font-size:xx-small;
   
  }

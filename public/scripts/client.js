@@ -3,7 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Fake data taken from initial-tweets.json
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 
 
 jQuery(document).ready(function () {
@@ -69,7 +75,7 @@ $("#error").hide();
     //let $tweet = /* Your code for creating the tweet element */
     // ...
     let markup = `
-         <article class="create-tweet">
+         <article class="createTweet">
             <div class="photo">
               <img class="profile" src="${tweet.user.avatars}">
               
@@ -82,6 +88,7 @@ $("#error").hide();
             <p>${tweet.content.text}</p>
           </div>
           <footer>
+          <span>${jQuery.timeago(tweet.created_at)}</span>
             <div class="icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -111,9 +118,9 @@ $("#error").hide();
           <div class="message">
             <p>${escape(tweet.content.text)}</p>
           </div>
-          <!--<label for ="user-tweet-text">user 1 tweet!</label>
+          <label for="user-tweet-text">user 1 tweet!</label>
 
-          <textarea name="new-text" id="new-tweet-text"></textarea>-->
+        <textarea name="new-text" id="new-tweet-text"></textarea>
 
           <footer>
             <span>${jquery.timeago(tweet.created_at)}</span>
@@ -131,14 +138,16 @@ $("#error").hide();
     $("#new-tweet-form").submit(function (event) {
       console.log('event');
       event.preventDefault();
+      //event.stopImmediatePropagation()
       let charCount = $("#tweet-text").val().length;
+      console.log(charCount)
       if (charCount === 0) {
         console.log("my hello world")
           $(".displayerror").text("You need letters to tweet");
           $("#error").slideDown();
       } else if (charCount > 140){ 
-        alert("more than 140 characters...please tweet upto 140 characters!");
-          $(".displayerror").text("Too many words to tweet");
+        //alert("more than 140 characters...please tweet upto 140 characters!");
+          $(".displayerror").text("Too long,please give upto 140 characters!");
           $("#error").slideDown();
       } else {
           console.log($( this ).serialize());
@@ -151,3 +160,5 @@ $("#error").hide();
       console.log("hello world here?")
   })
 })
+
+

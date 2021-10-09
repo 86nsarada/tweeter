@@ -8,6 +8,7 @@ label{
     border:solid 1px #bebebe;
     margin: 2em;
     padding: 5px;
+    margin-top: 200px;
   }
   #tweet-text{
     resize: none;
