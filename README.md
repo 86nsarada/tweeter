@@ -15,3 +15,18 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body - parser
+- chance
+- md5
+- http-server
+
+## screenshots
+
+![screenshot of tweet desktop view "](https://github.com/86nsarada/tweeter/blob/master/docs/desktop-view.png)
+
+![screenshot of more characters error message](https://github.com/86nsarada/tweeter/blob/master/docs/error-More.png)
+
+![screenshot of missing letters tweet box](https://github.com/86nsarada/tweeter/blob/master/docs/missLetterError.png)
+
+
+
