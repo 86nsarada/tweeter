@@ -126,10 +126,7 @@ jQuery(document).ready(function () {
         $("#tweet-text").val("");
       });
     }
-   if(charCount > 0 && charCount < 140){
-      $(".displayerror").text("");
-      $("#error").hide();
-    }
+   
   })
 })
 
