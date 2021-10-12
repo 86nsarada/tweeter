@@ -12,6 +12,10 @@ $(document).ready(function () {
     else {
       $("#counter_clicks").css("color", "black")
     }
+    if(textAreaLength > 0 && textAreaLength < 140){
+      $(".displayerror").text("");
+      $("#error").hide();
+    }
   })
 
 });

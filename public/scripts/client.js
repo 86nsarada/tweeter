@@ -126,7 +126,10 @@ jQuery(document).ready(function () {
         $("#tweet-text").val("");
       });
     }
-    console.log("hello world here?")
+   if(charCount > 0 && charCount < 140){
+      $(".displayerror").text("");
+      $("#error").hide();
+    }
   })
 })
 
